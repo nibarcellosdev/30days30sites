@@ -220,6 +220,7 @@ li {
 @media (max-width: 680px) {
 	.header-bg .container {
 		flex-direction: column;
+		align-items: center;
 	}
 
 	.header-logo img {
