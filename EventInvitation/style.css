@@ -216,3 +216,28 @@ li {
 .icons-box a:hover{
 	color: #bdc3c7;
 }
+
+/* Breakpoints */
+
+@media (max-width: 680px) {
+	.header-bg .container {
+		flex-direction: column;
+	}
+
+	.header-logo img {
+		margin: 0 auto;
+	}
+
+	.main-bg {
+		background-position: center 200px;
+	}
+
+	.container {
+		width: 480px;
+		margin: 0 auto;
+	}
+
+	.listen-video iframe {
+		max-width: 480px;
+	}
+}
