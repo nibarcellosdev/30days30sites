@@ -1,0 +1,126 @@
+@import 'reset';
+@import 'grid';
+
+$background-body: #85a;
+
+@function em($pixels, $context: 16) {
+	@return ($pixels / $context) * 1em;
+}
+
+@mixin type-1($size) {
+	font-family: 'PT Mono', monospace;
+	@if $size == 16 {
+		font-size: em($size);
+	}
+	@else if $size == 18 {
+		font-size: em($size);
+	}	
+	@else if $size == 24 {
+		font-size: em($size);
+	}
+}
+
+@mixin type-2($size) {
+    font-family: 'Aref Ruqaa', serif;
+	@if $size == 24 {
+		font-size: em($size);
+	}
+	@else if $size == 36 {
+		font-size: em($size);
+	}	
+	@else if $size == 48 {
+		font-size: em($size);
+	}
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+// Menu
+
+.menu {
+	display: flex;
+	height: auto;
+}
+
+.menu-flex {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.menu-nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+// Photo Panel
+.photo-flex {
+	display: flex;
+	width: 100%;
+	flex-wrap: wrap;
+}
+
+.img-panel {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex: 1 0 701.5px;
+	position: relative;
+	overflow: hidden;
+}
+
+
+.img-panel img {
+	width: 100%;
+	height: auto;
+}
+
+
+.title {
+	color: #fff;
+	font-size: em(48);
+	font-family: 'Aref Ruqaa', serif;
+	letter-spacing: 2px;
+	line-height: 1.4em;
+	font-weight: 700;
+	box-shadow: 0 1px 0 0  #ccc;
+	position: absolute;
+}
+
+// Aside
+
+.menu-flex img {
+	width: 70%;
+	padding-bottom: 30px;
+}
+
+.menu-flex p {
+	text-align: center;
+	font-family: 'PT Mono', monospace;
+	font-size: em(16);
+	line-height: 1.4em;
+}
+
+.menu-flex .icons-menu ul {
+	display: flex;
+	li {
+		margin-top: 20px;
+		
+		padding: 10px;
+	}
+	a {
+		font-size: em(24);
+	}
+}
+
+.img-panel .active {
+	flex-grow: 5;
+}
